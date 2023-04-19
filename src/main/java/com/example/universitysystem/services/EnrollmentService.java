@@ -6,13 +6,13 @@ import com.example.universitysystem.entities.EnrollmentId;
 import java.util.List;
 
 public interface EnrollmentService {
-    Enrollment saveEnrollment(Enrollment enrollment);
+    String saveEnrollment(Enrollment enrollment);
 
     List<Enrollment> fetchEnrollments();
 
     List<Enrollment> fetchEnrollmentsByStudentId(Long studentEnrolledId);
 
-    void deleteEnrollment(Long studentId, Long courseId);
+    String deleteEnrollment(Long studentId, Long courseId);
 
     Enrollment updateEnrollment(Long studentId, Long courseId, Enrollment enrollment);
 }

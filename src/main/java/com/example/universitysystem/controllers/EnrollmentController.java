@@ -17,8 +17,7 @@ public class EnrollmentController {
 
     @PostMapping("/enrollments")
     public String saveEnrollment(@RequestBody Enrollment enrollment){
-        enrollmentService.saveEnrollment(enrollment);
-        return "enrollment added successfully";
+        return enrollmentService.saveEnrollment(enrollment);
     }
 
     @GetMapping("/enrollments")
@@ -33,8 +32,7 @@ public class EnrollmentController {
 
     @DeleteMapping("enrollments/{studentId}/{courseId}")
     public String deleteEnrollment(@PathVariable("studentId") Long studentId, @PathVariable("courseId") Long courseId){
-        enrollmentService.deleteEnrollment(studentId, courseId);
-        return "enrollment deleted successfully";
+        return enrollmentService.deleteEnrollment(studentId, courseId);
     }
 
     @PutMapping("/enrollments/{studentId}/{courseId}")

@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import java.time.LocalDate;
 import java.util.Date;
 
 @RequiredArgsConstructor
@@ -18,5 +19,6 @@ public class Enrollment {
 
     @EmbeddedId
     private EnrollmentId enrollmentId;
-    private Date enrolledDate;
+    private LocalDate enrolledDate;
+    private String studentEnrolEmail;
 }
